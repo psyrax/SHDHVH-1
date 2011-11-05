@@ -1,0 +1,1 @@
+<a href="https://github.com/login/oauth/authorize?client_id=bd01925d961b7962f327&redirect_uri=http://shdh.oglabs.info/user/back&scope=user,public_repo,gist">Login</a>
