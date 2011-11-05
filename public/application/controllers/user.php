@@ -23,7 +23,10 @@ class User extends CI_Controller {
 		$this->template->load('template', 'user/index_view', $data);
 	}
 	public function back(){
-		print_r($_POST);
+		$o_code=$_GET['code'];
+		$git_user=$this->curl->simple_get("https://api.github.com/user?access_token=".$o_code);
+		$user_data=json_decode($git_user);
+		print_r($user_data);
 	}
 }
 
