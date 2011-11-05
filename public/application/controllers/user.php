@@ -25,9 +25,10 @@ class User extends CI_Controller {
 	public function back(){
 		$o_code=$_GET['code'];
 		$git_user=$this->curl->simple_get("https://api.github.com/user?access_token=".$o_code);
-		$user_data=json_decode($git_user);
+		//$user_data=json_decode($git_user);
+		echo "lol";
 		echo $git_user;
-		print_r($user_data);
+		//print_r($user_data);
 	}
 }
 
