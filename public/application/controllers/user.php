@@ -76,6 +76,7 @@ class User extends CI_Controller {
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, "https://api.github.com/user/repos?access_token=".$token);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($handler, CURLOPT_POST, 1);
 		curl_setopt($handler, CURLOPT_POSTFIELDS, "name=Hello-World&description=This is your first repo&homepage=https://github.com&public=true&has_issues=true&has_wiki=true&has_downloads=true");
 		$user_json = curl_exec ($ch);
 		curl_close($ch);
