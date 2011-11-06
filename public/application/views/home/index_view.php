@@ -14,7 +14,6 @@
 			</div>
 		</div>
 	</div>
-	<div class='span-2'>&nbsp;</div>
 	<div class="span-10">
 		<div class="box">
 			<h2>Adopt</h2>

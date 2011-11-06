@@ -168,6 +168,7 @@ div#body div#footer a:hover {
 
 .box {
 	padding-left:10px;
+    margin:0 10px 0 10px;
     border:1px solid #E6E6E6;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -189,7 +190,7 @@ div#body div#footer a:hover {
 }
 
 .information {
-	width:280px !important;
+	width:280px;
 	display:inline-table;
 	
 }
@@ -201,8 +202,8 @@ div#body div#footer a:hover {
 }
 
 .thumb {
-	width:75px !important;
-	height:75px !important;
+	width:75px;
+	height:75px;
 	display:inline-table;
 }
 
@@ -210,8 +211,8 @@ div#body div#footer a:hover {
 	margin:0px;
 	margin-left:7em;
 	padding:0px;
-	margin-top:10px !important;
-	margin-bottom:10px !important;
+	margin-top:10px;
+	margin-bottom:10px;
 	width: 100px;
 	height: 30px;
     font-family:"BreeRegular";
