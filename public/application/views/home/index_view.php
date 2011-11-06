@@ -1,4 +1,4 @@
-<div>
+<div class='span-24'>
 	<div class="span-10">
 		<div class="box">
 			<div class="form">
@@ -34,7 +34,7 @@
 	</div>
 </div>
 <div class="reset"></div>
-<div class="span-21 push-2 mainc">
+<div class="span-24">
 	<div class="mainctitle">
 		<p>Succesfully Revamped</p>
 	</div>
