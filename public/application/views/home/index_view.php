@@ -1,5 +1,5 @@
 <div class='span-24'>
-	<div class="span-10 box">
+	<div class="span-12 box">
 		<div>
 			<div class="form">
 				<h2>Submit</h2>
@@ -14,7 +14,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="span-10 box">
+	<div class="span-12 box">
 		<div>
 			<h2>Adopt</h2>
 			<div class="details">
