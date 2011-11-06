@@ -1,6 +1,6 @@
 <div class='span-24'>
-	<div class="span-10">
-		<div class="box">
+	<div class="span-10 box">
+		<div>
 			<div class="form">
 				<h2>Submit</h2>
 				<p class="box_desc">Submit a website to be revamped, remodeled and redesigned!</p>
@@ -14,8 +14,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="span-10">
-		<div class="box">
+	<div class="span-10 box">
+		<div>
 			<h2>Adopt</h2>
 			<div class="details">
 				<div class="information">
