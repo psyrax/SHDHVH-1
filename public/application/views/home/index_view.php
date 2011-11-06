@@ -28,7 +28,7 @@
 				</div>
 				<div>
 				<button type="button">Browse</button>
-				>/div>
+				</div>
 			</div>
 		</div>
 	</div>
