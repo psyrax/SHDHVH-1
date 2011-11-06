@@ -22,9 +22,9 @@ class Users_model extends CI_Model {
         $query = $this->db->insert($table,$user);
     }
 
-    function get_user($table,$uid)
+    function get_user($table,$git_id)
     {
-        $query = $this->db->get_where($table, array('uid'=>$uid));
+        $query = $this->db->get_where($table, array('git_id'=>$git_id));
         if($query->result()):
             $info=$query->result();
             return $info[0];

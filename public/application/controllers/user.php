@@ -45,14 +45,18 @@ class User extends CI_Controller {
 			curl_close($ch);
 			$user_data=json_decode($user_json);
 			if(!isset($user_data->message)):
-				
-				$insert_data=array(
-					'git_id'=>$user_data->id,
-					'email'=>$user_data->email,
-					'login'=>$user_data->login,
-					'git_json'=>$user_json
-				);
-				$this->users_model->create_user('users', $insert_data);
+				$login=$this->users_model->get_user('users', $user_data->id);
+				if(!$login):
+					$insert_data=array(
+						'git_id'=>$user_data->id,
+						'email'=>$user_data->email,
+						'login'=>$user_data->login,
+						'git_json'=>$user_json
+					);
+					$this->users_model->create_user('users', $insert_data);
+				else:
+					echo $login->id;
+				endif;
 			endif;
 		else:
 			echo "Error";
