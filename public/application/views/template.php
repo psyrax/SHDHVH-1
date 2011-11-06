@@ -7,7 +7,7 @@
   	</head>
 
 <body>
-	<div class="container">
+	<div id="body" class="container">
 		<div id="header" class="span-24">
 			<div class"logo">
 				<h1><span id="gradient"></span>Do<span id="vamp">vamp</span></h1>
