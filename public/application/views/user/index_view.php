@@ -1,1 +1,1 @@
-<a href="https://github.com/login/oauth/authorize?client_id=bd01925d961b7962f327&scope=user,public_repo,repo,gist">Login</a>
+<h1><a href="https://github.com/login/oauth/authorize?client_id=bd01925d961b7962f327&scope=user,public_repo,repo,gist">Login with GitHub</a></h1><br>
