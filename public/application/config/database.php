@@ -48,8 +48,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'walrus';
-$db['default']['password'] = 'fish';
+$db['default']['username'] = 'fish';
+$db['default']['password'] = 'walrus';
 $db['default']['database'] = 'dovamp';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
