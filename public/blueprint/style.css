@@ -34,11 +34,11 @@ h1 {
 
 
 #header {
-	padding:10px;
+	padding:0px 10px 0px 10px;
 }
 
 #footer {
-	height:50px;
+	height:10px;
 	text-align:center;
 	padding:0px;
 	margin:0px;
@@ -153,7 +153,7 @@ div#body div#footer {
     font-size:18px;
     color:#4D4D4D;
     text-shadow:0 1px 0 #FFF;
-    border-top:solid #030303;
+    border-top:solid #E6E6E6;
 }
 
 div#body div#footer a {
@@ -228,4 +228,30 @@ div#body div#footer a:hover {
     border-radius:4 px;
 
     cursor:pointer;
+}
+
+.mainc {
+	border:solid #5D5D5D;
+	-moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    -o-border-radius:4px;
+    border-radius:4 px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.mainctitle p{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	font-family: "BreeRegular";
+	background:#E6E6E6;
+}
+
+.done {
+	padding-left:10px;
+}
+
+.done p{
+	margin:0px;
 }

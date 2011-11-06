@@ -1,6 +1,4 @@
-<div class="reset"></div>
-
-<div class="span-24">
+<div class="span-24 mainb">
 	<div class="span-10 first prepend-2 append-1">
 		<div id="box">
 			<div id="form">
@@ -33,5 +31,13 @@
 		</div>
 	</div>
 </div>
-
 <div class="reset"></div>
+<div class="span-21 push-2 mainc">
+	<div class="mainctitle">
+		<p>Succesfully Revamped</p>
+	</div>
+	<div class="done">
+		<p><a href="http://" >Website</a></p>
+		<img src="/images/thumb.png" width="75" height="75">
+	</div>
+</div>
