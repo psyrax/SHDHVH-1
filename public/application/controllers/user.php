@@ -26,19 +26,11 @@ class User extends CI_Controller {
 		//Getting User OAuth
 		$o_code=$_GET['code'];
 		$url = "https://github.com/login/oauth/access_token";
-		$postData = array(
-			"client_id" => "bd01925d961b7962f327", 
-			"client_secret" => "ec02e79e203ada11e82318c1d69e3bee2e8d12fb"
-		);
 		/*Convierte el array en el formato adecuado para cURL*/
-		$elements = array();
-		foreach ($postData as $name=>$value) {
-			$elements[] = "{$name}=".urlencode($value);
-		}
 		$handler = curl_init();
 		curl_setopt($handler, CURLOPT_URL, $url);
 		curl_setopt($handler, CURLOPT_POST, 1);
-		curl_setopt($handler, CURLOPT_POSTFIELDS, "client_id=bd01925d961b7962f327&client_secret=ec02e79e203ada11e82318c1d69e3bee2e8d12fb");
+		curl_setopt($handler, CURLOPT_POSTFIELDS, "client_id=bd01925d961b7962f327&client_secret=ec02e79e203ada11e82318c1d69e3bee2e8d12fb&code=".$o_code);
 		$response = curl_exec ($handler);
 		curl_close($handler);
 		echo 'otra cosa';
