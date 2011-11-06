@@ -1,9 +1,9 @@
 <div class="span-24 mainb">
 	<div class="span-10 first prepend-2 append-1">
-		<div id="box">
-			<div id="form">
+		<div class="box">
+			<div class="form">
 				<h2>Submit</h2>
-				<p id="box_desc">Submit a website to be revamped, remodeled and redesigned!</p>
+				<p class="box_desc">Submit a website to be revamped, remodeled and redesigned!</p>
 				<form id="submit" method="post" action="" method="post" class="validate">
 					<p class="instructions">Website</p><input type="text" name="website" placeholder="http://..." required/>
 					<p class="instructions">Needs</p> <textarea name="needs" placeholder="design, ux, html, css, javascript" required></textarea>
@@ -14,8 +14,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="span-10 last">
-		<div id="box">
+	<div class="span-10">
+		<div class="box">
 			<h2>Adopt</h2>
 			<div class="details">
 				<div class="information">

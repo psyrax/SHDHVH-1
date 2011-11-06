@@ -82,7 +82,7 @@ h2 {
     padding-left:18px;
 }
 
-body div#body div#box div#form p#box_desc {
+body div.body div.box div.form p.box_desc {
     font-family:"AllerRegular";
     font-size:17px;
     color:#5D5D5D;
@@ -166,7 +166,7 @@ div#body div#footer a:hover {
     text-decoration:underline;
 }
 
-#box {
+.box {
 	padding-left:10px;
     border:1px solid #E6E6E6;
     -moz-border-radius:4px;
