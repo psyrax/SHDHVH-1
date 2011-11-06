@@ -74,7 +74,7 @@ class User extends CI_Controller {
 		echo $token;
 		echo "<hr />";
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, "https://api.github.com/user/repos?access_token=".$token);
+		curl_setopt($ch, CURLOPT_URL, "https://api.github.com/user/repos/test?access_token=".$token);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_POST, 1);
