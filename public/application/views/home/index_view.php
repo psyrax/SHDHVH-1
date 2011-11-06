@@ -1,5 +1,5 @@
-<div class="span-24 mainb">
-	<div class="span-10 first prepend-2 append-1">
+<div>
+	<div class="span-10">
 		<div class="box">
 			<div class="form">
 				<h2>Submit</h2>

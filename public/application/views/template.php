@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="reset"></div>
-    	<div id="contents" class="span-24"><?= $contents ?></div>
+    	<div id="contents"><?= $contents ?></div>
     	<div class="reset"></div>
     	<div id="footer" class="span-24">
     		<p class="span-3 prepend-8 first"><a href="/about" >About</a></p>
