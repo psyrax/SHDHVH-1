@@ -75,10 +75,10 @@ class User extends CI_Controller {
 		echo "<hr />";
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, "https://api.github.com/user/repos");
+		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: token '.$token));
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		//curl_setopt($ch, CURLOPT_POST, 1);
-		/*curl_setopt($ch, CURLOPT_POSTFIELDS, '{
+		curl_setopt($ch, CURLOPT_POSTFIELDS, '{
   "name": "Hello-World-OMG!",
   "description": "This is your first repo",
   "homepage": "https://github.com",
@@ -86,7 +86,7 @@ class User extends CI_Controller {
   "has_issues": true,
   "has_wiki": true,
   "has_downloads": true
-}');*/
+}');
 		$user_json = curl_exec ($ch);
 		curl_close($ch);
 		$user_data=json_decode($user_json);
