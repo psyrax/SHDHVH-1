@@ -23,6 +23,7 @@ class User extends CI_Controller {
 		$this->template->load('template', 'user/index_view', $data);
 	}
 	public function back(){
+		$this->load->model->('users_model', '', TRUE)
 		//Getting User OAuth
 		$o_code=$_GET['code'];
 		$url = "https://github.com/login/oauth/access_token";
@@ -43,7 +44,14 @@ class User extends CI_Controller {
 			$user_json = curl_exec ($ch);
 			curl_close($ch);
 			$user_data=json_decode($user_json);
-			print_r($user_data);
+			if(!$user_data->message):
+				echo $user_data->id;
+				/*print_r($user_data);
+				$insert_data=array(
+					'git_id'=>$user_data['id'];
+				);
+				$this->users_model->create_user('users', $insert_data);*/
+			endif;
 		else:
 			echo "Error";
 		endif;
