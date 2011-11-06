@@ -24,6 +24,7 @@ class User extends CI_Controller {
 	}
 	public function back(){
 		$this->load->model('users_model', '', TRUE);
+		$this->load->helper('url');
 		//Getting User OAuth
 		$o_code=$_GET['code'];
 		$url = "https://github.com/login/oauth/access_token";
@@ -37,7 +38,9 @@ class User extends CI_Controller {
 		curl_close($handler);
 		$res_data=explode("&", $response);
 		if($res_data[0]!="error"):
+			$ses_data=array();
 			$oauth_data=explode("=", $res_data[0]);
+			$ses_data['token']=$oauth_data[1];
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, "https://api.github.com/user?access_token=".$oauth_data[1]);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -54,14 +57,28 @@ class User extends CI_Controller {
 						'git_json'=>$user_json
 					);
 					$this->users_model->create_user('users', $insert_data);
+					$ses_data['git_id']=$user_data->id;
 				else:
-					echo $login->id;
+					$ses_data['git_id']=$login->git_id;
 				endif;
 			endif;
+			$this->session->set_userdata($ses_data);
+			redirect('/user/repos', 'refresh');
 		else:
 			echo "Error";
 		endif;
 		//print_r($user_data);
+	}
+	public function repos(){
+		$token=$this->session->userdata('token');
+		echo $token;
+		echo "<hr />";
+		curl_setopt($ch, CURLOPT_URL, "https://api.github.com/user/repos?access_token=".$token);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			$user_json = curl_exec ($ch);
+			curl_close($ch);
+			$user_data=json_decode($user_json);
+			print_r($user_data);
 	}
 }
 
