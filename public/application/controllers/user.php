@@ -35,6 +35,7 @@ class User extends CI_Controller {
 		$response = curl_exec ($handler);
 		curl_close($handler);
 		echo $response;
+		$res_data=explode("=", $response);
 		/*
 		$handler = curl_init("https://api.github.com/user?access_token".$o_code);
 		$response = curl_exec ($handler);
