@@ -90,7 +90,7 @@ class User extends CI_Controller {
   		$repo_json = curl_exec ($ch);
   		curl_close($ch);
   		$repo_data=json_decode($user_json);
-  		echo "<h1><a href=\"".$repo_data['html_url']."\">Repo created</a>;
+  		echo "<h1><a href=\"".$repo_data['html_url']."\">Repo created</a>";
 	}
 }
 
