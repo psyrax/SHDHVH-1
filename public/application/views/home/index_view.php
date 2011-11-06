@@ -31,7 +31,6 @@
 			</div>
 		</div>
 	</div>
-<div class="reset"></div>
 <div class="span-24">
 	<div class="mainctitle">
 		<p>Succesfully Revamped</p>
