@@ -36,7 +36,6 @@ class User extends CI_Controller {
 			$elements[] = "{$name}=".urlencode($value);
 		}
 		$handler = curl_init();
-		print_r($elements;)
 		curl_setopt($handler, CURLOPT_URL, $url);
 		curl_setopt($handler, CURLOPT_POST, 1);
 		curl_setopt($handler, CURLOPT_POSTFIELDS, "client_id=bd01925d961b7962f327&client_secret=ec02e79e203ada11e82318c1d69e3bee2e8d12fb");
