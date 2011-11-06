@@ -6,9 +6,9 @@
 				<p id="box_desc">Submit a website to be revamped, remodeled and redesigned!</p>
 				<form id="submit" method="post" action="" method="post" class="validate">
 					<p class="instructions">Website</p><input type="text" name="website" placeholder="http://..." required/>
-					<p class="instructions">Needs</p> <input type="text" name="needs" placeholder="design, ux, html, css, javascript" required/>
+					<p class="instructions">Needs</p> <textarea name="needs" placeholder="design, ux, html, css, javascript" required><textarea/>
 					<p class="instructions">Submitter</p><input type="text" name="submiter" placeholder="Name" required/>
-					<p class="instructions">Description</p><input type="text" name="description" placeholder="This website needs help with... because..." required/>
+					<p class="instructions">Description</p><textarea name="description" placeholder="This website needs help with... because..." required><textarea/>
 					<input type="submit" value="Submit" name="submit" class="button" />
 				</form>
 			</div>

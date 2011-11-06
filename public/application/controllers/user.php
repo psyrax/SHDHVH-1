@@ -42,7 +42,8 @@ class User extends CI_Controller {
 			$oauth_data=explode("=", $res_data[0]);
 			$ses_data['token']=$oauth_data[1];
 			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, "https://api.github.com/user?access_token=".$oauth_data[1]);
+			curl_setopt($ch, CURLOPT_URL, "https://api.github.com/");
+			curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: token '.$oauth_data[1]);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 			$user_json = curl_exec ($ch);
 			curl_close($ch);
