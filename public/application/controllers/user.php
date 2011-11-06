@@ -23,7 +23,7 @@ class User extends CI_Controller {
 		$this->template->load('template', 'user/index_view', $data);
 	}
 	public function back(){
-		$this->load->model->('users_model', '', TRUE)
+		$this->load->model->('users_model', '', TRUE);
 		//Getting User OAuth
 		$o_code=$_GET['code'];
 		$url = "https://github.com/login/oauth/access_token";
