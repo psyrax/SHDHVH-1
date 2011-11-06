@@ -90,7 +90,7 @@ select {background-color:#fff;border-width:1px;border-style:solid;}
 input[type=text], input[type=password], input[type=url], input[type=email], input.text, input.title, textarea, select {margin:0.5em 0;}
 input.text, input.title {width:300px;padding:5px;}
 input.title {font-size:1.5em;}
-textarea {width:300px;height:100px;padding:5px;}
+textarea {width:256px;height:100px;padding:5px;font-family:"BreeRegular";border:1px solid #E6E6E6;-moz-border-radius:4px;-webkit-border-radius:4px;-o-border-radius:4px;border-radius:4 px;background: #F2F2F2;}
 form.inline {line-height:3;}
 form.inline p {margin-bottom:0;}
 .error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
