@@ -30,15 +30,10 @@ class User extends CI_Controller {
 		$handler = curl_init();
 		curl_setopt($handler, CURLOPT_URL, $url);
 		curl_setopt($handler, CURLOPT_POST, 1);
+		curl_setopt($handler, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($handler, CURLOPT_POSTFIELDS, "client_id=bd01925d961b7962f327&client_secret=ec02e79e203ada11e82318c1d69e3bee2e8d12fb&code=".$o_code);
 		$response = curl_exec ($handler);
-				$response_data=explode("&", $response);
-		$token_find=$response_data[0];
-		$token_get=explode("=", $token_find);
 		curl_close($handler);
-		//$oauth=$token_get[1];
-		//echo $oauth;
-		print_r($token_get);
 		/*
 		$handler = curl_init("https://api.github.com/user?access_token".$o_code);
 		$response = curl_exec ($handler);
