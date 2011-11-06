@@ -34,19 +34,19 @@ class User extends CI_Controller {
 		curl_setopt($handler, CURLOPT_POSTFIELDS, "client_id=bd01925d961b7962f327&client_secret=ec02e79e203ada11e82318c1d69e3bee2e8d12fb&code=".$o_code);
 		$response = curl_exec ($handler);
 		curl_close($handler);
-		echo $response;
 		$res_data=explode("&", $response);
 		if($res_data[0]!="error"):
 			$oauth_data=explode("=", $res_data[0]);
-			print_r($oauth_data);
+			$ch = curl_init()
+			curl_setopt($ch, CURLOPT_URL, "https://api.github.com/user?access_token=".$oauth_data[1]);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			$user_json = curl_exec ($ch);
+			curl_close($ch);
+			$user_data=json_decode($user_json);
+			print_r($user_data);
 		else:
 			echo "Error";
 		endif;
-		
-		$handler = curl_init("https://api.github.com/user?access_token=".$oauth_data[1]);
-		$response = curl_exec ($handler);
-		curl_close($handler);
-		echo $response;
 		//print_r($user_data);
 	}
 }
