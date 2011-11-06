@@ -79,18 +79,18 @@ class User extends CI_Controller {
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: token '.$token));
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, '{
-  "name": "Hello-World-OMG!",
-  "description": "This is your first repo",
-  "homepage": "https://github.com",
-  "public": true,
-  "has_issues": true,
-  "has_wiki": true,
-  "has_downloads": true
-}');
-		$user_json = curl_exec ($ch);
-		curl_close($ch);
-		$user_data=json_decode($user_json);
-		print_r($user_data);
+  			"name": "Hello-World",
+  			"description": "This is your first repo",
+  			"homepage": "https://github.com",
+  			"public": true,
+  			"has_issues": true,
+  			"has_wiki": true,
+  			"has_downloads": true}'
+  		);
+  		$repo_json = curl_exec ($ch);
+  		curl_close($ch);
+  		$repo_data=json_decode($user_json);
+  		echo "<h1><a href=\"".$repo_data['html_url']."\">Repo created</a>;
 	}
 }
 
