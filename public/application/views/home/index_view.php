@@ -26,7 +26,9 @@
 				<div class="thumb">
 					<img src="/images/thumb.png" width="75" height="75">
 				</div>
+				<div>
 				<button type="button">Browse</button>
+				>/div>
 			</div>
 		</div>
 	</div>
