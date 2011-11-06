@@ -34,6 +34,7 @@ class User extends CI_Controller {
 		curl_setopt($handler, CURLOPT_POSTFIELDS, "client_id=bd01925d961b7962f327&client_secret=ec02e79e203ada11e82318c1d69e3bee2e8d12fb&code=".$o_code);
 		$response = curl_exec ($handler);
 		curl_close($handler);
+		echo $response;
 		/*
 		$handler = curl_init("https://api.github.com/user?access_token".$o_code);
 		$response = curl_exec ($handler);
