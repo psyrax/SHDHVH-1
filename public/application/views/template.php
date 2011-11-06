@@ -7,7 +7,7 @@
   	</head>
 
 <body>
-	<div id="body" class="container">
+	<div class="container">
 		<div id="header" class="span-24">
 			<div class"logo">
 				<h1><span id="gradient"></span>Do<span id="vamp">vamp</span></h1>
@@ -18,8 +18,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="reset"></div>
-    	<div id="contents"><?= $contents ?></div>
+    	<div><?= $contents ?></div>
     	<div class="reset"></div>
     	<div id="footer" class="span-24">
     		<p class="span-3 prepend-8 first"><a href="/about" >About</a></p>
