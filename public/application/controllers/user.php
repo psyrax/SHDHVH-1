@@ -41,7 +41,7 @@ class User extends CI_Controller {
 		curl_setopt($handler, CURLOPT_POSTFIELDS, $elements);
 		$response = curl_exec ($handler);
 		curl_close($handler);
-
+		echo ¨otra cosa¨;
 		echo $response;
 		/*
 		$handler = curl_init("https://api.github.com/user?access_token".$o_code);
