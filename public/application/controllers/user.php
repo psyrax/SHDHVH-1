@@ -44,8 +44,8 @@ class User extends CI_Controller {
 			$user_json = curl_exec ($ch);
 			curl_close($ch);
 			$user_data=json_decode($user_json);
-			if(!$user_data->message):
-				echo $user_data->id;
+			if(!$user_data['message']):
+				echo $user_data['id'];
 				/*print_r($user_data);
 				$insert_data=array(
 					'git_id'=>$user_data['id'];
