@@ -86,7 +86,7 @@ class User extends CI_Controller {
   "has_issues": true,
   "has_wiki": true,
   "has_downloads": true
-}';
+}');
 		$user_json = curl_exec ($ch);
 		curl_close($ch);
 		$user_data=json_decode($user_json);
